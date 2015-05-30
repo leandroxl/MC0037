@@ -1,4 +1,4 @@
-package com.raftelti.mc0037.atividade1.parteA;
+package com.raftelti.ufabc.mc0037.atividade1.parteA;
 
 public class ConversaoDeTemperatura {
 	public static void main(String[] args) {
