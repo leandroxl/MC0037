@@ -1,4 +1,4 @@
-package com.raftelti.ufabc.mc0037.atividade1.parteB;
+package com.raftelti.ufabc.mc0037.atividade0.parteB;
 
 /**
  * Created by Rafael on 28/05/2015.
