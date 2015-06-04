@@ -7,7 +7,7 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 		System.out.println("Conectando ao banco de dados.");
 		try {
-			String url = "jdbc:mysql://localhost/progweb";
+			String url = "jdbc:mysql://localhost/agendadb";
 			return DriverManager.getConnection(url, "root", "");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
