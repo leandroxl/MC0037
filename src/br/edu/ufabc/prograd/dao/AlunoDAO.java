@@ -33,9 +33,40 @@ public class AlunoDAO {
 		}
 	}
 
-	public List<Aluno> listar() {
+    public void remove(Aluno aluno) {
+        String sql = "DELETE FROM alunos WHERE id = ?";
+
+        try {
+            PreparedStatement statement = this.connection.prepareStatement(sql);
+            statement.setLong(1, aluno.getId());
+
+            statement.execute();
+            statement.close();
+        } catch(SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void altera(Aluno aluno) {
+        String sql = "UPDATE alunos SET nome=?, email=?, endereco=? WHERE id = ?";
+
+        try {
+            PreparedStatement statement = this.connection.prepareStatement(sql);
+            statement.setString(1, aluno.getNome());
+            statement.setString(2, aluno.getEmail());
+            statement.setString(3, aluno.getEndereco());
+            statement.setLong(4, aluno.getId());
+
+            statement.execute();
+            statement.close();
+        } catch(SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+	public List<Aluno> getLista() {
 		List<Aluno> alunos = new ArrayList<Aluno>();
-		String sql = "SELECT * FROM alunos";
+		String sql = "SELECT * FROM alunos ORDER BY nome";
 
 		try {
 			PreparedStatement statement = this.connection.prepareStatement(sql);
