@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - progweb@localhost" uuid="14411fcc-5e45-4800-859e-9f32a2b88868">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>progweb.*</schema-pattern>
+      <default-schemas>progweb.*</default-schemas>
+    </data-source>
+  </component>
+</project>
